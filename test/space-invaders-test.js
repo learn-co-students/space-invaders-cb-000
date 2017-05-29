@@ -66,6 +66,7 @@ describe('space invaders', () => {
       jon = new CrewMember('Defender')
       katie = new CrewMember('Gunner')
       spaceship = new Spaceship('The Krestel', [tristan, jon, katie], 5, 4)
+      debugger
     })
 
     it('`docked` should return false for ships with a crew', function() {
