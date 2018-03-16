@@ -5,17 +5,17 @@ class Spaceship {
     this.crew = crew;
     this.phasers = phasers;
     this.shields = shields;
-    this.docked = !(crew);
+    this.docked = !(crew.length > 0)
+    this.phasersCharge = 'uncharged';
     this.warpDrive = 'disengaged';
     this.cloaked = false;
-    this.phasersCharge = 'uncharged';
     this.assignShipToCrew()
   }
 
   assignShipToCrew() {
     if (!this.docked) {
       this.crew.forEach((crewMember) => {
-        crewMember.currentSpaceship = this;
+        crewMember.currentShip = this;
       });
     }
   }
