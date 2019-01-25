@@ -5,11 +5,11 @@ class Spaceship {
     this.phasers = phasers;
     this.shields = shields;
     this.cloaked = false
-    this.docked = true
+    this.docked = this.crew.length === 0 ? true : false;
     this.warpDrive = "Disengaged"
     this.phasersCharge = "Uncharged"
+
+    if (!this.docked) {this.crew.map( (c) => {c.currentShip = this} )}
   }
-  engageWarpDrive() {if (this.currentShip.match(/Looking for a Rig/i)) {return "had no effect"} else {}}
-  setsInvisibility() {if (this.currentShip.match(/Looking for a Rig/i)) {return "had no effect"} else {}}
 
 }
