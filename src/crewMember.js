@@ -8,7 +8,7 @@ class CrewMember{
     return 'had no effect'
   }
   setsInvisibility(){
-    if (this.currentShip === 'Looking for a Rig'){
+    if(this.currentShip === 'Looking for a Rig'){
       return 'had no effect'
     } else{
       if (this.position === 'Defender'){
